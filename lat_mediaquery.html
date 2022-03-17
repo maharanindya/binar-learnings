@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
 </head>
+<style>
+    .mobile, .tablet, .desktop {
+        display:none;
+    }
+    @media (max-width: 640px) {
+        body {
+            background-color: red;
+        }
+        .tablet, .desktop {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
+    }
+
+    @media (min-width: 640px) {
+        body {
+            background-color: blue;
+        }
+        .mobile, .desktop {
+            display: none;
+        }
+        .tablet {
+            display: block;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        body {
+            background-color: green;
+        }
+        .mobile, .tablet {
+            display: none;
+        }
+        .desktop {
+            display: block;
+        }
+    }
+</style>
+</head>
+
 <body>
-    
+
+    <p class="mobile">Ini device mobile</p>
+    <p class="tablet">Ini device tablet</p>
+    <p class="desktop">Ini device desktop</p>
+
 </body>
+
 </html>
